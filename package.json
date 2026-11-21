@@ -1,0 +1,9 @@
+{
+  "name": "mr-ahmed-portfolio",
+  "private": true,
+  "description": "Portfolio website with a password-protected Admin Panel (Netlify Functions + Netlify Blobs)",
+  "type": "module",
+  "dependencies": {
+    "@netlify/blobs": "8.2.0"
+  }
+}

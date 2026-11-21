@@ -1,0 +1,22 @@
+# Netlify settings for Mr. Ahmed's portfolio website + Admin Panel.
+# Nothing to change here: Netlify reads this file automatically.
+
+[build]
+  publish = "."
+  command = "echo 'Website ready - no build step needed'"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "same-origin"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    X-Frame-Options = "DENY"
